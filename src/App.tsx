@@ -1,6 +1,8 @@
 import Particles from '@/components/Particles'
 import Hero from '@/sections/Hero'
 import TechMarquee from '@/sections/TechMarquee'
+import About from '@/sections/About'
+import WhatIDo from '@/sections/WhatIDo'
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <main className="relative z-10 overflow-x-clip">
         <Hero />
         <TechMarquee />
+        <About />
+        <WhatIDo />
       </main>
     </>
   )

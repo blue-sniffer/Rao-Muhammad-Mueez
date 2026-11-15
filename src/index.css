@@ -156,8 +156,14 @@
   body {
     @apply bg-background text-foreground;}
   html {
-    @apply font-sans;
-    scroll-behavior: smooth;}}
+    @apply font-sans;}
+  /* Anchor links: smooth only when the visitor has not asked for reduced motion. */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;}}
+  /* Leave a little room above a section reached through a nav link. */
+  section[id] {
+    scroll-margin-top: 1.5rem;}}
 
 @utility hero-heading {
   background: linear-gradient(180deg, #7e848f 0%, #bbccd7 100%);
