@@ -23,7 +23,7 @@ const rowTwo = [...techStack].reverse().map(toLogo)
 
 function TechMarquee() {
   return (
-    <section aria-label="Tech stack" className="flex flex-col gap-3 pt-24 pb-10 sm:pt-32 md:pt-40">
+    <section data-starfield aria-label="Tech stack" className="flex flex-col gap-3 pt-24 pb-10 sm:pt-32 md:pt-40">
       <LogoLoop logos={rowOne} direction="right" speed={60} logoHeight={26} gap={12} scrollBoost={1} draggable={false} ariaLabel="Tech stack, row one" />
       <LogoLoop logos={rowTwo} direction="left" speed={60} logoHeight={26} gap={12} scrollBoost={1} draggable={false} ariaLabel="Tech stack, row two" />
     </section>

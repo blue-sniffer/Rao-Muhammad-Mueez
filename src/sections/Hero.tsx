@@ -16,6 +16,7 @@ function Hero() {
   return (
     <section
       id="top"
+      data-starfield
       style={heroVars}
       className="relative flex h-svh min-h-[560px] flex-col overflow-x-clip [--f:15.5vw] [--nav:3.5rem] sm:[--f:13vw] md:[--f:14vw] md:[--nav:4rem] lg:[--f:14.5vw] lg:[--nav:4.25rem]"
     >

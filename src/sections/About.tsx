@@ -5,7 +5,7 @@ const revealText = '!font-medium text-[clamp(1.6rem,4.2vw,3.5rem)] leading-[1.3]
 
 function About() {
   return (
-    <section id="about" aria-labelledby="about-label" className="px-5 py-20 md:px-10 md:py-32">
+    <section id="about" data-starfield aria-labelledby="about-label" className="px-5 py-20 md:px-10 md:py-32">
       {/* Editorial layout: the label sits in a narrow left column, the statement fills the rest of the width. */}
       <div className="mx-auto grid max-w-6xl gap-x-12 gap-y-2 md:grid-cols-[9rem_minmax(0,1fr)] lg:grid-cols-[12rem_minmax(0,1fr)]">
         <p
