@@ -59,7 +59,7 @@ function Hero() {
         </AnimatedContent>
       </div>
 
-      {/* Portrait: fills the space under the heading. Anchored just under the heading; on wide screens it is height-limited and reaches the bottom edge. */}
+      {/* Avatar: a floating head anchored just above the bottom edge of the heading, with a gap left below it. */}
       <div className="pointer-events-none absolute inset-x-0 top-(--top) bottom-0 z-10 flex items-start justify-center">
         <AnimatedContent trigger="mount" distance={30} duration={0.7} delay={0.6}>
           <Magnet
@@ -68,13 +68,13 @@ function Hero() {
             className="pointer-events-auto"
             style={{ display: 'block' }}
           >
-            {/* 752x1024 image. Width is capped at the native 752px so it is never upscaled, at 115vw on phones,
-                and by the height available under the heading. The face centre sits at 55% across, hence the shift. */}
-            <div className="relative w-[min(752px,115vw,calc((100svh-var(--top))*0.734))] -translate-x-[5%]">
+            {/* 818x1044 floating head, already centred in its frame. Width is capped at the native 818px so it is
+                never upscaled, at 98vw on phones, and so that its height is 92% of the space under the heading. */}
+            <div className="relative w-[min(818px,98vw,calc((100svh-var(--top))*0.72))]">
               {SHOW_GLOW && (
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute top-[30%] left-[55%] aspect-square w-[210%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
+                  className="pointer-events-none absolute top-[45%] left-1/2 aspect-square w-[210%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
                   style={{
                     background:
                       'radial-gradient(closest-side, rgba(46, 112, 238, 0.13) 0%, rgba(46, 112, 238, 0.10) 20%, rgba(46, 112, 238, 0.06) 42%, rgba(46, 112, 238, 0.025) 66%, rgba(46, 112, 238, 0.007) 85%, rgba(46, 112, 238, 0) 100%)',
@@ -83,9 +83,9 @@ function Hero() {
               )}
               <img
                 src={portrait}
-                alt="Portrait of Mueez"
-                width={752}
-                height={1024}
+                alt="3D avatar of Mueez"
+                width={818}
+                height={1044}
                 draggable={false}
                 className="relative block h-auto w-full max-w-none select-none"
               />
